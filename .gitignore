@@ -1,0 +1,6 @@
+*.pyc
+.idea/
+raw_data/
+.DS_Store
+*.ipynb
+.ipynb_checkpoints/
