@@ -2,11 +2,11 @@
 **TRec: A Taxi Recommender System for Finding Passengers via Deep Neural Networks**
 
 ## Requirement
-  Python 2.7/3.5
-  Keras 2.x
-  sklearn
-  pandas
-  numpy  
+  Python 2.7/3.5<br/>
+  Keras 2.x<br/>
+  sklearn<br/>
+  pandas<br/>
+  numpy<br/>
   Tensorflow
 
 ## Run
