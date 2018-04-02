@@ -1,6 +1,7 @@
 *.pyc
 .idea/
-raw_data/
+raw_data/*.txt
 .DS_Store
 *.ipynb
 .ipynb_checkpoints/
+old_data/
