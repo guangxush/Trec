@@ -109,6 +109,32 @@ def load_data_v2(data_path):
 
     return x_train, y_train, x_dev, y_dev, x_test
 
+def load_data_v3(data_path):
+    train_data = open(os.path.join(data_path,'train.txt'), 'rb')
+    test_data = open(os.path.join(data_path,'test.txt'), 'rb')
+    for line in train_data:
+        temp = line.strip().split(',')
+        tid.append(temp[0])
+        grid.append(temp[1])
+        diection.append(temp[2])
+        tStmp.append(temp[3])
+        dur.append(temp[4])
+        dis.append(temp[5])
+        target.append(temp[6])
+
+fulList = tid + grid + direction + tStamp + dur + dis
+ful2idx = dict((v, i) for i, v in enumerate(list(set(fulList))))
+to_idx = lambda x: [ful2idx[word] for word in x]
+tid_array = to_idx(tid)
+grid_array = to_idx(grid)
+direction_array = to_idx(direction)
+tStamp_array = to_idx(tStamp)
+dur_array = to_idx(dur)
+dis_array = to_idx(dis)
+
+in_array = np.column_stack((tid_array, grid_array, direction_array, tStamp_array, dur_array, dis_array))
+target_array = np.asarray(target, dtype='int16')
+target_array = np_utils.to_categorical(target_array, nb_classes)
 
 def make_submission(result_path, results, model_name):
     submit_lines = ['test_id,count\n']
