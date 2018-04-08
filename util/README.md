@@ -3,7 +3,8 @@
 ## new_devide.py
 - 按taxiID将原始数据文件切割为成小csv文件，每个csv对应一个taxiID的某一天原始数据
 -
-  ```python new_devide.py 'data.txt'``` 其中data.txt代表某天原始数据txt文件
+  ```python new_devide.py 'data.txt'```   
+  其中data.txt代表某天原始数据txt文件
 
 ## dig.py
 - 对每一出租车计算其寻客情况数据，数据写入pre.txt中
@@ -12,6 +13,9 @@
 
 ## g_train_data.py
 - 对pre.txt数据进一步处理，生成标准data的格式
+- ```python g_train_data.py pre.txt ceil_size```
+其中pre.txt为粗糙的寻客数据，ceil_size为网格处理的单元网格大小 选为100  
+结果将生成input100.txt---标准的预处理数据格式
 
 ## my_Time.py
 - 对数据中的时间项进行标准化处理
