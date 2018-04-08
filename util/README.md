@@ -14,7 +14,7 @@
 ## g_train_data.py
 - 对pre.txt数据进一步处理，生成标准data的格式
 - ```python g_train_data.py pre.txt ceil_size```  
-其中pre.txt为粗糙的寻客数据，ceil_size为网格处理的单元网格大小 选为100  
+其中pre.txt为粗糙的寻客数据，ceil_size为网格处理的单元网格大小 选为1000  
 结果将生成input100.txt---标准的预处理数据格式  
 
 ## my_Time.py
