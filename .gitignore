@@ -5,3 +5,4 @@ raw_data/*.txt
 *.ipynb
 .ipynb_checkpoints/
 old_data/
+models/

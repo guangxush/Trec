@@ -158,7 +158,7 @@ def load_data_v3(data_path):
     n_status = len(ful2idx.keys()) # 得到分类数目
     return in_array, target_array, test_in_array, test_target_array, n_status
 
-# xgboost数据读取
+# xgboost/rf数据读取
 def load_data_v4(data_path):
     # 训练集输入数据特征
     tid, grid, direction, tStamp, dur, dis = [], [], [], [], [], []
