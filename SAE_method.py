@@ -6,6 +6,11 @@ from keras.utils import np_utils
 from sklearn import preprocessing as pp
 import numpy as np
 import os
+nb_epoch = 30
+batch_size = 2048
+status_maxlen = 4
+in_size, out_size = 4, 8
+nb_classes = 2823
 
 if __name__ == '__main__':
     in_array, target_array, test_in_array, test_target_array = load_data_v5(in_array, target_array, test_in_array,
