@@ -16,14 +16,6 @@
 - ```python g_train_data.py pre.txt ceil_size```  
 其中pre.txt为粗糙的寻客数据，ceil_size为网格处理的单元网格大小 选为100  
 结果将生成input100.txt---标准的预处理数据格式  
-|taxiID|出发点网格|方向|出发时间|寻客时间|目标网格变化|目标网格ID| 
-|-|-|-|-|-|-|-| 
-|10066|194-193|a|2.0|1094|-15x0y|18253| 
-| Name | Academy | score | 
-| - | :-: | -: | 
-| Harry Potter | Gryffindor| 90 | 
-| Hermione Granger | Gryffindor | 100 | 
-| Draco Malfoy | Slytherin | 90 |
 
 ## my_Time.py
 - 对数据中的时间项进行标准化处理
