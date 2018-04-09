@@ -20,7 +20,10 @@
 
 |模型/方法|Tranin Acc|Dev Acc|备注说明|
 |:--:|:--:|:--:|:--:|
-|mlp|0.00|0.00|多层神经网络|
+|mlp|0.628|0.000|[512, 256, 128] neurons|
+|XGBoost|0.211|0.000|max_depth: 40, eta: 0.1, silent: 0|
+|RF|0.117|0.000|max_depth: 30, n_estimators: 10,min_samples_split: 2|
+|SVM|---|0.000|C: 1.0, kernel: rbf, degree: 3|
 
 ## 文件组织方式
 |文件名称|文件描述|
