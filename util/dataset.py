@@ -118,6 +118,7 @@ def load_data_v3(data_path):
     # 结果
     target = []
     test_target = []
+    nb_classes = 2823
     train_data = open(os.path.join(data_path,'train.txt'), 'rb')
     test_data = open(os.path.join(data_path,'test.txt'), 'rb')
     # 读取输入数据，按照列分割
