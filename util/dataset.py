@@ -126,7 +126,7 @@ def load_data_v3(data_path):
         tid.append(temp[0])
         grid.append(temp[1])
         direction.append(temp[2])
-        tStmp.append(temp[3])
+        tStamp.append(temp[3])
         dur.append(temp[4])
         dis.append(temp[5])
         target.append(temp[6])
