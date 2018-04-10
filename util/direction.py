@@ -1,4 +1,7 @@
-
+#coding=utf-8
+'''
+计算出行方向
+'''
 def direction_index(s_x, s_y, e_x, e_y):
         '''                       
         0: still                  

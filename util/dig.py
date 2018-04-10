@@ -1,3 +1,4 @@
+#coding=utf-8
 '''
 处理切割后的单个文件
 处理后得到的文件内容格式为：
@@ -6,8 +7,6 @@ taxiID,s_x,s_y,s_time,e_x,e_y，e_time
 import sys
 import os
 import csv
-
-
 def excavate(infile):
     query = []
     result = {}
@@ -17,14 +16,11 @@ def excavate(infile):
         all_lines=csv.reader(csv_file)
         num=0
         for sp in all_lines:
-
             if num==0:
                 num+=1
                 continue
             sp[4] = round(float(sp[4]), 6)
             sp[5] = round(float(sp[5]), 6)
-
-
             if  sp[10] == '0':  # 数据可用性
                 continue;
                 # 载客状态0 False 1 True
@@ -37,7 +33,6 @@ def excavate(infile):
                     result[order] = query
                     order += 1
                     query = []
-
                 mark = True
             else:
                 if mark is True:  # 乘客下车
@@ -46,7 +41,6 @@ def excavate(infile):
                 mark = False
     #print(result)
     return result
-
 '''
 对切割后的数据进行处理
 raw_gps为存放taxiID数据单元csv的目录
@@ -62,8 +56,6 @@ def record(folder):
         for i in data:
             flink.writelines(','.join(data[i]))
     flink.close()
-
-
 
 def main():
 	folder = 'raw_gps'

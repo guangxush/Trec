@@ -1,6 +1,6 @@
+#coding=utf-8
 import pandas as pd
 import numpy as np
-
 '''
 原始数据集体积较大 
 采用pandas进行处理
@@ -17,7 +17,6 @@ def devide(files):
     #筛除id异常的数据
     #按taxiID分割生成csv
     #print(data)
-
     groups = data.groupby(data['id'])
     for group in groups:
         group[1].to_csv('raw_gps'+'/'+str(group[0]) + '.csv', index=False)

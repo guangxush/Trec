@@ -1,9 +1,8 @@
-'''
-Transfer time stamp to neural network input
-'''
-
+#coding=utf-8
 from datetime import datetime as dt
-
+'''
+将时间转换成时间戳
+'''
 def time_transfer(time):
 	hour, minute = time[:2], time[2:4]
 	minute = round(float(minute) / 60, 1)
@@ -28,7 +27,6 @@ if __name__ == '__main__':
 	a = '010203'
 	b = '010312'
 	c = '134520'
-
 	#time = [a,b,c]
 	#print map(time_transfer, time)
 	print (time_duration(a, b))

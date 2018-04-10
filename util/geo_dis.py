@@ -1,26 +1,19 @@
+#coding=utf-8
+from math import *
 '''
-Distance calculation by latitude and longitude
+根据经纬度计算距离
 '''
-
-from math import radians, cos, sin, asin, sqrt
-
 def haversine(lon1, lat1, lon2, lat2): 
     """
-    Calculate the great circle distance between two points 
-    on the earth (specified in decimal degrees)
+    根据经纬度计算地球上两个点之间的距离
     """
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-
     dlon = lon2 - lon1 
     dlat = lat2 - lat1 
     a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
     c = 2 * asin(sqrt(a)) 
     r = 6371
     return c * r * 1000
-
-#coding=utf-8
-
-from math import *
 
 def calcDistance(Lat_A, Lng_A, Lat_B, Lng_B):
     ra = 6378.140 
@@ -46,5 +39,4 @@ if __name__ == '__main__':
 	print('(Lat_A, Lng_A)=({0:10.3f},{1:10.3f})'.format(Lat_A,Lng_A))
 	print('(Lat_B, Lng_B)=({0:10.3f},{1:10.3f})'.format(Lat_B,Lng_B))
 	print('Distance={0:10.3f} km'.format(distance))
-
 	print (haversine(Lng_A, Lat_A, Lng_B, Lat_B))

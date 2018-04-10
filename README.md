@@ -12,9 +12,9 @@
 ## Run
 代码运行方式如下：
 * 训练过程：
-  <pre>python mlp.py  train</pre>
+  <pre>python cab_embedding.py  train</pre>
 * 测试过程：
-  <pre>python mlp.py  test</pre>
+  <pre>python cab_embedding.py  test</pre>
 
 ## 测试结果
 
