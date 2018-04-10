@@ -111,6 +111,13 @@ def load_data_v2(data_path):
 
 # embedding_mlp数据处理
 def load_data_v3(data_path):
+    # 输入数据参数
+    tid, grid, direction, tStamp, dur, dis = [], [], [], [], [], []
+    # 测试输入参数
+    test_tid, test_grid, test_direction, test_tStamp, test_dur, test_dis = [], [], [], [], [], []
+    # 结果
+    target = []
+    test_target = []
     train_data = open(os.path.join(data_path,'train.txt'), 'rb')
     test_data = open(os.path.join(data_path,'test.txt'), 'rb')
     # 读取输入数据，按照列分割

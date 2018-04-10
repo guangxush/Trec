@@ -10,10 +10,7 @@ def direction_index(s_x, s_y, e_x, e_y):
         6: right front            
         7: right back             
         8: right
-
         '''
-
-
         if s_x == e_x:            
                 if s_y == e_y:    
                         return 0  
